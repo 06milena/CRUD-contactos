@@ -35,7 +35,7 @@ def actualizarUsuarios(id,usuario):
     cursor=db.cursor()
     resultado = cursor.usuario.update_one(
         {
-        '_id': id
+        'id': id
         }, 
         {
             '$set': {
