@@ -48,9 +48,8 @@ def actualizarUsuarios(id,usuario):
 
 def eliminarUsuarios(id):
     cursor=db.cursor()
-    cursor=db.cursor()
-    cursor.execute('''delet from 
-        usuarios where id=%s'''(
+    cursor.execute('''delete from 
+        usuarios where id=%s''',(
             id
         ))
     print('eliminado')
@@ -89,9 +88,8 @@ def menuPrincipal():
             usuarios_actualizados = actualizarUsuarios(id, usuario)
             print(" actualizados: ", usuarios_actualizados)
         elif opcion==4:
-            print("Eliminar")
-            id = input("Ingrese el id a eliminar: ")
-            eliminado = eliminarUsuarios(id)
+            id = int(input("Ingrese el id a eliminar: "))
+            print("Contacto eliminado: ")
 
 
 menuPrincipal()
